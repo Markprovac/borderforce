@@ -1078,7 +1078,27 @@ button.whatsapp:hover {
     justify-content: center;
   }
 }
+/* Réduit les espaces dans Informations mission */
+.mission-compact{
+  gap:6px;
+}
 
+.mission-compact label{
+  margin:4px 0 2px 0;
+}
+
+.mission-compact input,
+.mission-compact select{
+  min-height:40px !important;
+  margin-bottom:4px !important;
+  padding:6px 10px !important;
+}
+
+@media (max-width:680px){
+  .mission-compact{
+    gap:4px;
+  }
+}
 </style>
 
 <script src="https://unpkg.com/html5-qrcode"></script>
@@ -1246,7 +1266,7 @@ button.whatsapp:hover {
       <h2>1 - Informations mission</h2>
       <p class="friendly-subtitle">Les informations principales sont regroupées ici pour éviter de chercher dans plusieurs onglets.</p>
 
-      <div class="form-grid">
+      <div class="form-grid mission-compact">
         <div class="full">
           <label for="siteSelect">Site :</label>
           <select id="siteSelect" aria-label="Sélection du site">
